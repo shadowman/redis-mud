@@ -3,19 +3,24 @@
   "version": "0.1.0",
   "description": "Simple MUD using JavaScript and RedisGraph.",
   "scripts": {
-    "test": "mocha spec/**/*-spec.js"
+    "test": "mocha",
+    "debug": "node --inspect server.js"
+  },
+  "mocha": {
+    "spec": "spec/**/*-spec.js",
+    "ui": "bdd"
   },
   "author": "Guy Royse <guy@guyroyse.com>",
   "license": "CC-BY-SA-4.0",
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^7.1.1"
+    "mocha": "^7.1.1",
+    "sinon": "^9.0.1",
+    "sinon-chai": "^3.5.0"
   },
   "dependencies": {
     "node-static": "^0.7.11",
-    "redis": "^3.0.2",
-    "redisgraph.js": "^2.0.3",
-    "uuid": "^7.0.2",
+    "redisgraph.js": "^2.1.0",
     "ws": "^7.2.3"
   }
 }
